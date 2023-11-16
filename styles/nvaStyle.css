@@ -29,49 +29,10 @@ header {
     margin: 0 auto;
 }
 
+/* Extra small devices (phones) */
+@media only screen and (max-width: 600px) {
 
-@media (min-width:949px) {
-    #menu_toggle {
-        display: none;
-    }
-
-    .hdr_menu {
-        margin: 27px 20px 0px 20px;
-        display: flex;
-        align-items: flex-end;
-        float: right;
-    }
-
-    .hdr_menu ul li {
-        display: inline-block;
-    }
-
-    .hdr_menu ul li a {
-        text-decoration: none;
-        padding: 8px 22px;
-        color: #e1f6f7;
-        font-weight: bold;
-        background-color: #29AB87;
-        border-radius: 8px;
-        margin: 5px 5px 0 5px;
-        transition: 0.5s;
-
-    }
-
-    .hdr_menu ul li a:hover {
-        background-color: #00A877;
-        box-shadow: 0 5px 10px rgba(12, 1, 1, 0.4);
-    }
-
-    .menu_box {
-        display: flex;
-        gap: 5px;
-        flex-wrap: nowrap;
-
-    }
-}
-
-@media (max-width:950px) {
+    /* Styles for phones go here */
     #menu_toggle {
         opacity: 0;
     }
@@ -158,5 +119,259 @@ header {
     .mnu_link:hover {
         background-color: #CFD8DC;
         color: #333;
+    }
+
+    .mainContent2 {
+        margin-top: 50px;
+    }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    /* Styles for tablets go here */
+    #menu_toggle {
+        opacity: 0;
+    }
+
+    #menu_toggle:checked+.menu_btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu_toggle:checked+.menu_btn>span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu_toggle:checked+.menu_btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu_toggle:checked~.menu_box {
+        visibility: visible !important;
+    }
+
+    .menu_btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu_btn>span,
+    .menu_btn>span::before,
+    .menu_btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(236, 186, 120);
+        transition-duration: .25s;
+    }
+
+    .menu_btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu_btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .hdr_menu {
+        display: flex;
+        flex-flow: column;
+        margin: 0px auto;
+    }
+
+    .menu_box {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0 0 280px 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #29AB87;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        /* transition-duration: s; */
+        visibility: hidden;
+    }
+
+    .mnu_link {
+        display: block;
+        padding: 12px 24px;
+        color: rgba(241, 241, 248, 0.829);
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .mnu_link:hover {
+        background-color: #CFD8DC;
+        color: #333;
+    }
+
+    .mainContent2 {
+        margin-top: 80px;
+    }
+}
+
+/* Medium devices (desktops, laptops) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    /* Styles for desktops and laptops go here */
+    #menu_toggle {
+        display: none;
+    }
+
+    .hdr_menu {
+        margin: 27px 20px 0px 20px;
+        display: flex;
+        align-items: flex-end;
+        float: right;
+    }
+
+    .hdr_menu ul li {
+        display: inline-block;
+    }
+
+    .hdr_menu ul li a {
+        text-decoration: none;
+        padding: 8px 22px;
+        color: #e1f6f7;
+        font-weight: bold;
+        background-color: #29AB87;
+        border-radius: 8px;
+        margin: 5px 5px 0 5px;
+        transition: 0.5s;
+
+    }
+
+    .hdr_menu ul li a:hover {
+        background-color: #00A877;
+        box-shadow: 0 5px 10px rgba(12, 1, 1, 0.4);
+    }
+
+    .menu_box {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .home-bus-style {
+        display: flex;
+    }
+
+    .mainContent2 {
+        margin-top: 100px;
+    }
+}
+
+/* Large devices (large desktops, high-res laptops) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+    /* Styles for large desktops and high-res laptops go here */
+    #menu_toggle {
+        display: none;
+    }
+
+    .hdr_menu {
+        margin: 27px 20px 0px 20px;
+        display: flex;
+        align-items: flex-end;
+        float: right;
+    }
+
+    .hdr_menu ul li {
+        display: inline-block;
+    }
+
+    .hdr_menu ul li a {
+        text-decoration: none;
+        padding: 8px 22px;
+        color: #e1f6f7;
+        font-weight: bold;
+        background-color: #29AB87;
+        border-radius: 8px;
+        margin: 5px 5px 0 5px;
+        transition: 0.5s;
+
+    }
+
+    .hdr_menu ul li a:hover {
+        background-color: #00A877;
+        box-shadow: 0 5px 10px rgba(12, 1, 1, 0.4);
+    }
+
+    .menu_box {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .home-bus-style {
+        display: flex;
+    }
+
+    .mainContent2 {
+        margin-top: 100px;
+    }
+}
+
+/* Extra large devices (4k monitors, large desktops) */
+@media only screen and (min-width: 1201px) {
+
+    /* Styles for extra-large devices go here */
+    #menu_toggle {
+        display: none;
+    }
+
+    .hdr_menu {
+        margin: 27px 20px 0px 20px;
+        display: flex;
+        align-items: flex-end;
+        float: right;
+    }
+
+    .hdr_menu ul li {
+        display: inline-block;
+    }
+
+    .hdr_menu ul li a {
+        text-decoration: none;
+        padding: 8px 22px;
+        color: #e1f6f7;
+        font-weight: bold;
+        background-color: #29AB87;
+        border-radius: 8px;
+        margin: 5px 5px 0 5px;
+        transition: 0.5s;
+
+    }
+
+    .hdr_menu ul li a:hover {
+        background-color: #00A877;
+        box-shadow: 0 5px 10px rgba(12, 1, 1, 0.4);
+    }
+
+    .menu_box {
+        display: flex;
+        gap: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .home-bus-style {
+        display: flex;
+    }
+
+    .mainContent2 {
+        margin-top: 100px;
     }
 }
